@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body[data-theme="light"] {
+  --bg: #ffffff;
+  --text: #222;
+  --card: #f3f3f3;
+}
+
+body[data-theme="dark"] {
+  --bg: #1e1e1e;
+  --text: #f8f8f8;
+  --card: #2a2a2a;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.add-form,
+.filter-bar,
+.task-item {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  background: var(--card);
+  padding: 10px;
+  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-item .done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.filter-bar button.active {
+  background: black;
+  color: white;
+}
+
+.empty {
+  text-align: center;
+  opacity: 0.7;
+}
